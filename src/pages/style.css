@@ -50,30 +50,6 @@ a ion-icon {
   font-size: 2rem;
 }
 
-/* Section Title + Avatar */
-section.title-avatar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 1.1rem 2.4rem;
-}
-
-.title-avatar > img {
-  width: 6.4rem;
-  height: 6.4rem;
-  border-radius: 50%;
-}
-
-h1 {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-
-  font-size: 3.2rem;
-  color: #403937;
-}
-
 /* Section Filter */
 section.filter {
   margin-top: 3.2rem;
@@ -145,6 +121,12 @@ section.kanban {
   gap: 4.8rem;
   padding-top: 3.2rem;
 }
+.title-button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
 
 section.kanban > * {
   flex: 1;
@@ -157,6 +139,24 @@ section.kanban h2 {
   padding: 2.4rem 0;
 }
 
+.button-add {
+  all: unset;
+}
+
+.button-add img{
+  width: 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 0.3rem;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-add img:hover{
+  background-color: #7c3aed;
+}
 .card {
   padding: 2.4rem;
   background: #ffffff;

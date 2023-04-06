@@ -1,0 +1,64 @@
+.CardInput {
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(234, 226, 253) 0px 4px 16px;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.CardInput input {
+  all: unset;
+  height: 2rem;
+  color: rgb(124, 58, 237);
+  border-radius: 4px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent transparent rgb(226, 214, 255);
+  border-image: initial;
+  padding: 0.3rem 0.5rem;
+  box-shadow: transparent 0px 0px 0px 1px;
+}
+
+textarea {
+  color: rgb(124, 58, 237);
+  border-radius: 4px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent transparent rgb(226, 214, 255);
+  border-image: initial;
+  padding: 0.3rem 0.5rem;
+  box-shadow: transparent 0px 0px 0px 1px;
+  margin-bottom: 1rem;
+}
+
+.close {
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+
+.button__close{
+  all:unset;
+}
+
+.button__close:hover{
+  background-color: rgb(180, 152, 228);
+}
+
+.button__close img{
+  padding: 0px 0.3rem;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 3rem;
+}

@@ -1,7 +1,10 @@
 import './style.css'
-import Pencil from '../assets/pencil.svg';
+import Add from '../assets/add.svg';
 
 import SideBar from '../components/Sidebar';
+import Header from '../components/Header';
+import Card from '../components/Card';
+import CardForm from '../components/CardForm';
 
 function App() {
   return (
@@ -9,11 +12,7 @@ function App() {
       <SideBar/>
       <main>
         <div className="inner">
-          <section className="title-avatar">
-            <h1>Meu KanBan <img src={Pencil} alt="" /></h1>
-            <img src="https://github.com/HenriqueSilva367.png" alt="avatar" />
-          </section>
-
+          <Header/>
           <section className="filter">
             <button>
               
@@ -29,29 +28,13 @@ function App() {
           </section>
           <section className="kanban">
             <div className="todo">
+              <div className='title-button'>
               <h2>A fazer</h2>
+              <button className='button-add'><img src={Add} alt="Adicionar"/></button>
+              </div>
               <div className="cards">
-                <div className="card">
-                  <h3>#boraCodar um Kanban 🧑🏾‍💻</h3>
-                  <p>
-                    Novo desafio do #boraCodar da Rocketseat, onde é proposto
-                    construir um quadro de Kanban.
-                  </p>
-                  <div className="tags">
-                    <span>rocketseat</span>
-                    <span>desafio</span>
-                  </div>
-                </div>
-                <div className="card">
-                  <h3>Manter a ofensiva 🔥</h3>
-                  <p>
-                    Manter minha atividade na plataforma da Rocketseat para não
-                    perder a ofensiva
-                  </p>
-                  <div className="tags">
-                    <span>rocketseat</span>
-                  </div>
-                </div>
+                <CardForm />
+                <Card /> 
               </div>
             </div>
             <div className="doing">
