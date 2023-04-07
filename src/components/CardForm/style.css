@@ -17,7 +17,7 @@ form {
   height: 2rem;
   color: rgb(124, 58, 237);
   border-radius: 4px;
-  width: 100%;
+  width: 96%;
   border-width: 1px;
   border-style: solid;
   border-color: transparent transparent rgb(226, 214, 255);
@@ -25,6 +25,7 @@ form {
   padding: 0.3rem 0.5rem;
   box-shadow: transparent 0px 0px 0px 1px;
 }
+
 
 textarea {
   color: rgb(124, 58, 237);
@@ -36,7 +37,7 @@ textarea {
   border-image: initial;
   padding: 0.3rem 0.5rem;
   box-shadow: transparent 0px 0px 0px 1px;
-  margin-bottom: 1rem;
+  
 }
 
 .close {
@@ -44,6 +45,7 @@ textarea {
   gap: 0.5rem;
   -webkit-box-pack: end;
   justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 .button__close{

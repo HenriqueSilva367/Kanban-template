@@ -1,12 +1,23 @@
+import { useState } from 'react';
 import './style.css'
 import Add from '../assets/add.svg';
-
 import SideBar from '../components/Sidebar';
 import Header from '../components/Header';
 import Card from '../components/Card';
 import CardForm from '../components/CardForm';
 
 function App() {
+
+  const [openCreateNewItem, setOpenCreateNewItem] = useState<boolean>(false);
+
+interface CardFormProps {
+	handleClose: () => void;
+}
+
+  function toggleOpenCreateNewItem(): void {
+		setOpenCreateNewItem((state) => !state);
+	}
+
   return (
     <div id="app">
       <SideBar/>
@@ -30,11 +41,15 @@ function App() {
             <div className="todo">
               <div className='title-button'>
               <h2>A fazer</h2>
-              <button className='button-add'><img src={Add} alt="Adicionar"/></button>
+              {openCreateNewItem === false ?
+                <button className='button-add' onClick={toggleOpenCreateNewItem}><img src={Add} alt="Adicionar"/></button>
+              : null}
               </div>
               <div className="cards">
-                <CardForm />
-                <Card /> 
+              {openCreateNewItem && (
+                <CardForm handleClose={toggleOpenCreateNewItem} />
+              )}
+              <Card /> 
               </div>
             </div>
             <div className="doing">
